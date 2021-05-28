@@ -1,0 +1,10 @@
+{
+  "name": "vercel-config",
+  "version": "1.0.0",
+  "description": "CLI to Generate vercel.json for Deployment at vercel.",
+  "main": "src/index.js",
+  "keywords": [],
+  "author": "JasmeetBali (devs.us.1984@gmail.com)",
+  "license": "MIT",
+  "dependencies": {}
+}
