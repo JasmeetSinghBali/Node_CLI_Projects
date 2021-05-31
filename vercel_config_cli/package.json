@@ -2,11 +2,19 @@
   "name": "vercel-config",
   "version": "1.0.0",
   "description": "CLI to Generate vercel.json for Deployment at vercel.",
-  "main": "src/index.js",
+  "main": "src/path/to/thing/index.js",
+  "scripts": {
+    "lint":"eslint src/"
+  },
   "keywords": [],
   "author": "JasmeetBali (devs.us.1984@gmail.com)",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
   }
 }
