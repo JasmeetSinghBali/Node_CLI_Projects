@@ -6,5 +6,7 @@
   "keywords": [],
   "author": "JasmeetBali (devs.us.1984@gmail.com)",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "inquirer": "^8.1.0"
+  }
 }

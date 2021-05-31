@@ -5,7 +5,7 @@
 
 ****Status: Developing project 1****
 
-timestamp-16
+timestamp-35
 > ### Project -1 : vercel-config
  SRC : https://vercel.com/docs/configuration
 
@@ -26,21 +26,28 @@ timestamp-16
 - [x] choose appropriate liberary for argument parsing and interaction.
   - [x] Inquirer(interative questions)
 - [ ] ClI asks questions:
-  - [ ] automatic check wheather vercel.json already exists.
-    - [ ] yes , then ask if they want to overwrite the existing vercel.json
-  - [ ] Name of the project?
-    - [ ] default to current directory name
-  - [ ] What type of project?
-    * node-express
-    * next.js
-    * static
-    * react
-    * vue
-    * static-build
-    * lambda
+  - [x] automatic check wheather vercel.json already exists.
+    - [x] yes , then ask if they want to overwrite the existing vercel.json
+  - [x] Name of the project?
+    - [x] default to current directory name
+  - [x] What type of project?
+    * node-express (ask them where the app.listen i.e server.js path is)
+    * next.js (no need of vercel.json it is automatically handled by vercel)
+    * static (ask them the name of the directory they are trying to deploy)
+    * react (default options)
+    * vue (default options)
+    * static-build (what directory to build to)
+    * lambda (entry point)
+  - [ ] Ask project Specific questions mentioned above in brackets.
   - [ ] which file is the entry point?
   - [ ] Would you like to specify an alias
     - [ ] Alias one or more
   - [ ] Would you like to add vercel-build to package.json?
     - [ ] only prompt if react,vue,static,next builds
   - [ ] Would you like to deploy?
+
+> ### Core dependencies
+
+- [x] inquirer
+- [x] fs
+- [x] path
