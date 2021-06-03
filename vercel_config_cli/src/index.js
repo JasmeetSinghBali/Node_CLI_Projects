@@ -1,7 +1,16 @@
+#! /usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
+
+// importing configs
 const nodeExpress = require('./configs/nodeExpress');
+const staticConfig = require('./configs/staticConfig');
+const fef = require('./configs/fef'); // for react,static,static-builds
+
+const vercelPath=path.join(process.cwd(),'vercel.json');
+const existingConfig=fs.existsSync(vercelPath);
 
 const existConfig = fs.existsSync('vercel.json');
 
@@ -11,7 +20,6 @@ const existConfig = fs.existsSync('vercel.json');
 async function buildConfig() {
   let config = {
     version: 2,
-
   };
   const answers = await inquirer.prompt([
     {
@@ -22,7 +30,7 @@ async function buildConfig() {
     },
     {
       type: 'list',
-      choices: ['node-express', 'static', 'react', 'vue', 'static-build', 'lambda'],
+      choices: ['node-express', 'static', 'react', 'vue', 'static-build'],
       name: 'type',
       message: 'What type of project?',
     },
@@ -33,9 +41,31 @@ async function buildConfig() {
       // calls nodeExpress and spreads baseConfig and config
       config = await nodeExpress(config);
       break;
+
+    case 'static':
+      config = await staticConfig(config);
+      break;
+
+    case 'react':
+      config = await fef(config,'build');
+      break;
+
+    case 'vue':
+      config = await fef(config);
+      break;
+
+    case 'static-build':
+      config = await fef(config);
+      break;
+
+    default:
+      break;
   }
   // after the config funciton for nodeExpress executes.
-  console.log(config);
+  //console.log(config);
+  fs.writeFileSync(vercelPath,JSON.stringify(config,null,2),'utf8');
+  console.log('All done! check vercel.json for further configs or type vercel to deploy!');
+  process.exit(0);
 }
 
 if (existConfig) {

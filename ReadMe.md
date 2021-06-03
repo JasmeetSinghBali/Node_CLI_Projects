@@ -27,27 +27,24 @@ timestamp-103
 > ### Blueprint
 - [x] choose appropriate liberary for argument parsing and interaction.
   - [x] Inquirer(interative questions)
-- [ ] ClI asks questions:
+- [x] ClI asks questions:
   - [x] automatic check wheather vercel.json already exists.
     - [x] yes , then ask if they want to overwrite the existing vercel.json
   - [x] Name of the project?
     - [x] default to current directory name
   - [x] What type of project?
     * node-express (ask them where the app.listen i.e server.js path is)
-    * next.js (no need of vercel.json it is automatically handled by vercel)
     * static (ask them the name of the directory they are trying to deploy)
     * react (default options)
     * vue (default options)
     * static-build (what directory to build to)
-    * lambda (entry point)
-  - [ ] Ask project Specific questions mentioned above in brackets.
-  - [ ] which file is the entry point?
-  - [ ] Would you like to specify an alias
-    - [ ] Alias one or more
-  - [ ] Would you like to add vercel-build to package.json?
-    - [ ] only prompt if react,vue,static,next builds
-  - [ ] Would you like to deploy?
-
+  - [x] Ask project Specific questions mentioned above in brackets.
+  - [x] which file is the entry point?
+  - [x] Would you like to add vercel-build to package.json?
+    - [x] only prompt if react,vue,static,next builds
+  - [x] Add the bin command in package.json
+  - [x] npm link to test it out.(for developer only)
+  - [x] specify the interpreter in the index.js along with shebang #!
 > ### Core dependencies
 
 - [x] inquirer
