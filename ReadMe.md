@@ -1,12 +1,18 @@
 > # Collection of Node.js based CLI tool
 
-****Status: Developing project 1****
+***
 
-timestamp-103
+****Status: project 1 Done****
+
+
 
 - [x] Vercel-config(for generating vercel.json configuration file for deployment on vercel)
+ published- https://www.npmjs.com/package/vercel-config
+
 - [x] capit(crypto currency api tracker)
 
+***
+***
 > ## possible options for building the CLI tool
 
  - [x] Inquirer(question based cli and then genrate somthing useful)
@@ -16,6 +22,8 @@ timestamp-103
 - [x] Caporal A mixture of both interactive prompt(question/answers) and argument passing , has helper like we typed some wrong flag or cmd in CLI it will suggest did you mean this, has colors ,loggers
 
 - [x] yargs interactive is combination of argument parser and inquirer i.e interative prompts+argument passing.
+
+***
 
 > ### Project -1 : vercel-config
  SRC : https://vercel.com/docs/configuration
@@ -45,6 +53,7 @@ timestamp-103
   - [x] Add the bin command in package.json
   - [x] npm link to test it out.(for developer only)
   - [x] specify the interpreter in the index.js along with shebang #!
+
 > ### Core dependencies
 
 - [x] inquirer
@@ -52,7 +61,7 @@ timestamp-103
 - [x] path
 - [x] eslint (npm run lint , npm run lint -- --fix)
 
-> ### Imp Facts
+> ### Imp/fun Facts
 
 - [x] for windows + . to open emojis
 
@@ -64,15 +73,16 @@ timestamp-103
          /api
           -/server.js
 
+> ## Future Version Options
 
-- [x] functions(****Can Only be Used if the serverless function is inside a api directory i.e the project posses a api directory****)
+- [ ] functions(****Can Only be Used if the serverless function is inside a api directory i.e the project posses a api directory****) refer https://vercel.com/docs/configuration
 
    - ****memory****
    An integer defining the memory your Serverless Function should be provided with (between 128 and 3008, in intervals of 64).
    - ****maxduration****
    An integer defining how long your Serverless Function should be allowed to run on every request in seconds (between 1 and the maximum limit of your plan 10s(Hobby),60s(Pro), 900s(Enterprise)).
 
-****in vercel.config (note for next.js only memeory and maxDuration is allowed)****
+****in vercel.config (note for next.js only memory and maxDuration is allowed)****
 
         {
           "functions": {
