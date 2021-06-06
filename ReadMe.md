@@ -9,7 +9,11 @@
 - [x] Vercel-config(for generating vercel.json configuration file for deployment on vercel)
  published- https://www.npmjs.com/package/vercel-config
 
-- [x] capit(crypto currency api tracker)
+- [ ] capit(crypto currency api tracker)
+
+- [ ] express-rest-boilerplate (Express REST API Boilerplate)
+   - [ ] First make a REST API generalize boilerplate
+   in Snippets Collection.
 
 ***
 ***
