@@ -2,7 +2,7 @@
 
 ***
 
-****Status: project 1 Done****
+****Status: Working on project-2 capit****
 
 
 
@@ -96,3 +96,73 @@
             }
           }
          }
+
+***
+***
+
+> ## Project -2 CAPIT (crypto currency api tracker)
+
+20timestamp not able to console.log typed API key
+
+> ### Usage
+> #### Node-CLI tool to fetch cryptocurrency rates via nomics api
+>#### API :  https://nomics.com/  
+
+> ### Blueprint
+- [x] Set up Basic Boilerplate
+   - [x] set up bin in package.json
+   - [x] make the entry point of the bin executable with #!/usr/bin/env
+   - [x] create a link npm link(do not works for windows) can use node bin/project.js instead
+- [x] Install dependencies
+- [ ] Set up commander
+  - [ ] apikey commands
+    - [x] Set Up KeyManager class lib via configstore
+       - [x] set
+       - [x] show
+       - [x] remove
+    - [ ] Set up apikey
+       - [ ] call KeyManager methods via object in cammands.
+          - [ ] set
+          - [ ] show
+          - [ ] remove
+
+- [ ] Set up inquirer
+
+
+
+> ### Core dependencies
+- [x] Commander.js
+- [x] inquirer
+- [x] configstore
+- [x] axios
+- [x] colors
+
+> ### Some Imp/Fun facts I encountered during development
+
+- [x] Issue of importing ES modules note that they cannot be required(common.js) they have to be imported
+like in the case of configstore(6.0.0 version)
+Solution : downgraded to version 5.0.1 when configstore used require.
+
+- [x] process.argv contains the array of the passed flags/extra arguments while running a cli tool.
+
+        // in terminal
+        node src/bin/capit.js key someotherkey
+
+        Hello from capit
+        [  'C:\\dev\\node.exe',
+           'C:\\Users\\devsu\\Desktop\\Node_CLI_projects\\capit_crypto_tracker\\bin\\capit.js',
+           'key',
+           'someotherkey'
+         ]
+
+- [x] mentioning version,parse via commander gives us default version and help flags as argument initially.
+
+         // in terminal
+         node src/bin/capit.js -h
+         Usage: capit [options]
+
+         Options:
+          -V, --version  output the version number
+          -h, --help     display help for command
+
+- [x] Be sure to make the function async when using inquirer.prompt() as it returns a promise.
