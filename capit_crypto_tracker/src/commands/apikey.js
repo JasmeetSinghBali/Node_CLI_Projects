@@ -1,14 +1,13 @@
 const inquirer = require('inquirer');
 const colors = require('colors');
 const KeyManager = require('../lib/KeyManager');
-const {isRequired} = require('../utils/validation');
+const { isRequired } = require('../utils/validation');
 
 colors.setTheme({
   silly: 'rainbow',
   inp: 'grey',
   verbose: 'cyan',
   info: 'green',
-  data: 'grey',
   help: 'cyan',
   warn: 'yellow',
   debug: 'blue',
@@ -17,15 +16,15 @@ colors.setTheme({
 
 const apikey = {
   async set() {
-    try{
+    try {
       // using KeyManager Class lib method set via keyManager object
       const keyManager = new KeyManager();
       const input = await inquirer.prompt([
         {
           type: 'password',
           name: 'key',
-          message: 'Enter API key'.verbose + ' - ' + 'https://nomics.com'.underline.debug,
-          validate: isRequired
+          message: `${'Enter API key'.verbose} - ${'https://nomics.com'.underline.debug}`,
+          validate: isRequired,
         },
       ]);
       const key = keyManager.setKey(input.key);
@@ -34,31 +33,31 @@ const apikey = {
         console.log('API Key Set'.silly);
         return;
       }
-    }catch(err){
+    } catch (err) {
       console.error(err.message.error);
     }
-
   },
+  // eslint-disable-next-line
   show() {
-    try{
-      const keyManager=new KeyManager();
+    try {
+      const keyManager = new KeyManager();
       const key = keyManager.getKey();
 
-      console.log('Current API KEY: '.verbose,key.info);
+      console.log('Current API KEY: '.verbose, key.info);
       return key;
-    }catch(err){
-      console.error(err.message.error)
+    } catch (err) {
+      console.error(err.message.error);
     }
   },
-  async remove() {
-    try{
-      const keyManager=new KeyManager();
+  remove() {
+    try {
+      const keyManager = new KeyManager();
       keyManager.deleteKey();
 
       console.log('API Key was removed: '.debug);
-      return
-    }catch(err){
-      console.error(err.message.error)
+      return;
+    } catch (err) {
+      console.error(err.message.error);
     }
   },
 };

@@ -2,14 +2,15 @@
 
 ***
 
-****Status: Working on project-2 capit****
+****Status: to Start Working On Project-3 express-rest-boilerplate generator tool node-cli****
 
 
 
 - [x] Vercel-config(for generating vercel.json configuration file for deployment on vercel)
  published- https://www.npmjs.com/package/vercel-config
 
-- [ ] capit(crypto currency api tracker)
+- [x] capit(crypto currency api tracker) published-
+https://www.npmjs.com/package/capit
 
 - [ ] express-rest-boilerplate (Express REST API Boilerplate)
    - [ ] First make a REST API generalize boilerplate
@@ -102,11 +103,19 @@
 
 > ## Project -2 CAPIT (crypto currency api tracker)
 
-32 timestamp api key set,show,remove done
+****DONE v1.0.0****
 
 > ### Usage
 > #### Node-CLI tool to fetch cryptocurrency rates via nomics api
 >#### API :  https://nomics.com/  
+
+> ### Commands capit [options] [command]
+- capit apikey set (To add API key)
+- capit apikey show (To See your API Key)
+- capit apikey remove (To remove your API Key)
+- capit track price (to track prices of different cryptocoins)
+- capit apikey price --cur=YEN --coin=BTC,ETH (additional flags for custom data mentioning currency type and comma seperated coin symbols)
+
 
 > ### Blueprint
 - [x] Set up Basic Boilerplate
@@ -114,28 +123,37 @@
    - [x] make the entry point of the bin executable with #!/usr/bin/env
    - [x] create a link npm link(do not works for windows) can use node bin/project.js instead
 - [x] Install dependencies
-- [ ] Set up commander
-  - [ ] apikey commands
+- [x] Set up commander & Inquirer
+  - [x] apikey commands
     - [x] Set Up KeyManager class lib via configstore
        - [x] set
        - [x] show
        - [x] remove
-    - [ ] Set up apikey
-       - [ ] call KeyManager methods via object in cammands.
-          - [ ] set
-          - [ ] show
-          - [ ] remove
-
-- [ ] Set up inquirer
-
-
+    - [x] Set up apikey
+       - [x] call KeyManager methods via object in cammands.
+          - [x] set
+          - [x] show
+          - [x] remove
+  - [x] track commands
+    - [x] price
+       - [x] --coin flag
+       - [x] --cur flag
+- [x] custom API error handler
+- [ ] Publish 1.0.0
 
 > ### Core dependencies
+- [x] API docs nomics-https://nomics.com/docs/#tag/Currencies
 - [x] Commander.js
 - [x] inquirer
 - [x] configstore
 - [x] axios
 - [x] colors
+
+> ### Future Developments
+- [ ] generate a graph with the fetched data and show the graph in the console.
+- [ ] work on other endpoints of the api
+- [ ] make the error handler more robust by looking in to the docs of nomics.
+
 
 > ### Some Imp/Fun facts I encountered during development
 

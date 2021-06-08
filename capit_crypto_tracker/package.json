@@ -1,10 +1,11 @@
 {
   "name": "capit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cryptocurrency Rates Tracker powered by nomics API",
   "main": "src/bin/capit.js",
   "bin": "src/bin/capit.js",
   "scripts": {
+    "lint": "eslint src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "JasmeetBali (devs.us.1984@gmail.com)",
@@ -14,7 +15,11 @@
     "colors": "^1.4.0",
     "commander": "^7.2.0",
     "configstore": "^5.0.1",
-    "esm": "^3.2.25",
     "inquirer": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
   }
 }

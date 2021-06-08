@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#! /usr/bin/env node
 const program = require('commander');
 const pkg = require('../../package.json');
 
@@ -7,4 +7,5 @@ const pkg = require('../../package.json');
 
 program.version(pkg.version)
   .command('apikey', 'Manages API Key --https://nomics.com')
+  .command('track', 'Track Coin Price Info')
   .parse(process.argv);
