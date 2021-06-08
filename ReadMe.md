@@ -102,7 +102,7 @@
 
 > ## Project -2 CAPIT (crypto currency api tracker)
 
-20timestamp not able to console.log typed API key
+32 timestamp api key set,show,remove done
 
 > ### Usage
 > #### Node-CLI tool to fetch cryptocurrency rates via nomics api

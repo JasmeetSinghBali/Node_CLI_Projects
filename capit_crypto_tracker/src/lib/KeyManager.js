@@ -1,4 +1,5 @@
 const Configstore = require('configstore');
+const colors=require('colors');
 const pkg = require('../../package.json');
 
 class KeyManager{
@@ -8,8 +9,10 @@ class KeyManager{
 
   // method for setting the api key
   setKey(key){
+
     this.conf.set('apiKey',key);
     return key;
+
   }
 
   // method for getting the key
@@ -17,7 +20,7 @@ class KeyManager{
     const key=this.conf.get('apiKey');
 
     if(!key){
-      throw new Error('No API Key Found - Get your API key at https://nomics.com');
+      throw new Error('No API Key Found - Get your API key at https://nomics.com'.cyan);
     }
     return key;
   }
@@ -27,7 +30,7 @@ class KeyManager{
     const key=this.conf.get('apiKey');
 
     if(!key){
-      throw new Error('No API Key Found - Get your API key at https://nomics.com');
+      throw new Error('No API Key Found, Get your API key at https://nomics.com,\n'.red+'then set it via "capit apikey set" command'.yellow);
     }
 
     this.conf.delete('apiKey');
