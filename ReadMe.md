@@ -10,9 +10,8 @@
  published- https://www.npmjs.com/package/vercel-config
 
 - [x] capit(crypto currency api tracker) published-
-https://www.npmjs.com/package/capit
 
-- [ ] express-rest-boilerplate (Express REST API Boilerplate)
+- [ ] npm package to generate express-rest-boilerplate (Express REST API Boilerplate)
    - [ ] First make a REST API generalize boilerplate
    in Snippets Collection.
 
@@ -139,7 +138,7 @@ https://www.npmjs.com/package/capit
        - [x] --coin flag
        - [x] --cur flag
 - [x] custom API error handler
-- [ ] Publish 1.0.0
+- [x] Publish 1.0.0
 
 > ### Core dependencies
 - [x] API docs nomics-https://nomics.com/docs/#tag/Currencies
