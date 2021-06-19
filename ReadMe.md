@@ -2,18 +2,19 @@
 
 ***
 
-****Status: to Start Working On Project-3 express-rest-boilerplate generator tool node-cli****
+****Status: Working On Project-3 express-rest-boilerplate generator tool node-cli****
 
 
 
 - [x] Vercel-config(for generating vercel.json configuration file for deployment on vercel)
  published- https://www.npmjs.com/package/vercel-config
 
-- [x] capit(crypto currency api tracker) published-
+- [x] capit(crypto currency api tracker)
+published-https://www.npmjs.com/package/capit
 
 - [ ] npm package to generate express-rest-boilerplate (Express REST API Boilerplate)
-   - [ ] First make a REST API generalize boilerplate
-   in Snippets Collection.
+   - [x] First make a REST API generalize boilerplate
+   in my Snippets Collection.
 
 ***
 ***

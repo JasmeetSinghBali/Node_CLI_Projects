@@ -1,5 +1,5 @@
 {
-  "name": "express-rest-boilerplate",
+  "name": "create-api",
   "version": "1.0.0",
   "description": "Initial Boilerplate with CRUD,Auth Ready at your Service.",
   "main": "src/index.js",
