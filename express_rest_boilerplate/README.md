@@ -6,23 +6,6 @@ A CLI to automatically clone [express-rest-api-boilerplate](https://github.com/J
 
 - [@JassiBali](https://github.com/Jasmeet-1998)
 
-## Features
-- ✔ Authentication Routes
-  - ✔ Register
-  - ✔ Login
-  - ✔ Logout
-  - ✔ Refresh Token
-- ✔ MongoDB Config Setup
-- ✔ Multer config setup for file upload at server
-- ✔ CRUD Product Routes
-  - ✔ Unprotected
-  - ✔ JWT Protected
-
-        # Create,Delete,Update(protected)     
-        role : admin
-        # Get Single or all Products(unprotected)
-        role: Customer
-
 ## Installation
 
 Install the CLI globally OR  use npx:
@@ -40,6 +23,24 @@ Usage
   npx create-myexpress-api name-of-your-app
 ```
 ***This will create a directory with the given name, clone the express API boilerplate repo into it, and install dependencies.***
+
+## Features
+- ✔ Authentication Routes
+  - ✔ Register
+  - ✔ Login
+  - ✔ Logout
+  - ✔ Refresh Token
+- ✔ MongoDB Config Setup
+- ✔ Multer config setup for file upload at server
+- ✔ CRUD Product Routes
+  - ✔ Unprotected
+  - ✔ JWT Protected
+
+        # Create,Delete,Update(protected)     
+        role : admin
+        # Get Single or all Products(unprotected)
+        role: Customer
+
 
 ## Environment Variables
 

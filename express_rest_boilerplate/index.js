@@ -5,7 +5,7 @@
     var childProcess = require("child_process");
     var oldSpawn = childProcess.spawn;
     function mySpawn() {
-        console.log('spawn called');
+        console.log('LOG: spawn called'.cyan);
         console.log(arguments);
         var result = oldSpawn.apply(this, arguments);
         return result;
@@ -14,9 +14,6 @@
 })();
 
 global.opsys=process.platform;
-console.log(process.cwd());
-console.log('=============');
-console.log(process.argv[2]);
 const colors = require('colors');
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -45,32 +42,56 @@ runCommand('git', ['clone', repoURL, name])
     // to remove the .git file from the project
     if(opsys=="win32" || opsys == "win64"){
       // windows
+      console.log('---------Spawn Logs Ends Here-------'.help);
+      console.log('');
       console.log('Windows operating system detected'.warn);
-      dir=process.cwd()+`${name}/.git`;
-      fs.rmdir(dir,{recursive:true},(err)=>{
-        if(err){
-          throw err;
-        }
-        console.log('${dir} was deleted!'.verbose);
-      });
-
+      console.log('');
+      console.log('================ TO GET STARTED ==================='.silly);
+      console.log('');
+      console.log(`NOTE:`);
+      console.log('');
+      console.log(`1.) Make Sure you edit .env.sample file in '${name}' directory and change its extension from .env.sample to .env then run below commands from the '${name}' directory.`.verbose);
+      console.log('');
+      console.log(`2.) Delete '.git' inside your '${name}' directory before pushing changes to your git repo.`.verbose);
+      console.log('');
+      console.log(`cd ${name}`.info);
+      console.log('npm install'.info);
+      console.log('npm run dev'.info);
+      console.log('');
+      console.log(`For more details regarding api boilerplate structure refer ReadMe.md in '${name}'`.info);
+      console.log('');
+      console.log('Enjoy!!'.silly);
+      process.exit();
     }
-    else{
+    else if(opsys=="linux"){
       // bash linux
+      console.log('Linux Detected'.warn);
       return runCommand('rm', ['-rf', `${name}/.git`]);
     }
   }).then(() => {
+    console.log('Cloning DONE'.help);
+    console.log('');
     console.log('Installing dependencies...'.help);
 
     return runCommand('npm', ['install'],{
       cwd: process.cwd() + '/' + name}
     );
   }).then(() => {
-    console.log('All Done!'.silly);
+    console.log('---------Spawn Logs Ends Here-------'.help);
     console.log('');
-    console.log('To get started:'.help);
-    console.log('cd'.help, name);
-    console.log('npm run dev'.help);
+    console.log('================ TO GET STARTED ==================='.silly);
+    console.log('');
+    console.log(`NOTE:`);
+    console.log('');
+    console.log(`Make Sure you edit .env.sample file in '${name}' directory and change its extension from .env.sample to .env then run below commands from the '${name}' directory.`.verbose);
+    console.log('');
+    console.log(`cd ${name}`.info);
+    console.log('npm install'.info);
+    console.log('npm run dev'.info);
+    console.log('');
+    console.log(`For more details regarding api boilerplate structure refer ReadMe.md in '${name}'`.info);
+    console.log('');
+    console.log('Enjoy!!'.silly);
   });
 
 
@@ -82,7 +103,7 @@ function runCommand(command,args,options=undefined){
     });
 
     spawned.stderr.on('data',(data)=>{
-      console.error(data.toString().error);
+      console.error(data.toString().warn);
     });
 
     spawned.on('close',()=>{
