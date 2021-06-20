@@ -1,4 +1,3 @@
-
 # Express REST API Boilerplate
 
 A CLI to automatically clone [express-rest-api-boilerplate](https://github.com/Jasmeet-1998/mySnippets_Collection/tree/master/express_rest_starter_kit)
@@ -8,18 +7,20 @@ A CLI to automatically clone [express-rest-api-boilerplate](https://github.com/J
 - [@JassiBali](https://github.com/Jasmeet-1998)
 
 ## Features
-- [x] Authentication Routes
-  - [x] Register
-  - [x] Login
-  - [x] Logout
-  - [x] Refresh Token
-- [x] CRUD Product Routes
-  - [x] GET product single and all products Unprotected
-  - [x] JWT Protected
+- ✔ Authentication Routes
+  - ✔ Register
+  - ✔ Login
+  - ✔ Logout
+  - ✔ Refresh Token
+- ✔ MongoDB Config Setup
+- ✔ Multer config setup for file upload at server
+- ✔ CRUD Product Routes
+  - ✔ Unprotected
+  - ✔ JWT Protected
 
-        # Create,Delete,Update     
+        # Create,Delete,Update(protected)     
         role : admin
-        # Get Single or all Products
+        # Get Single or all Products(unprotected)
         role: Customer
 
 ## Installation
@@ -27,16 +28,16 @@ A CLI to automatically clone [express-rest-api-boilerplate](https://github.com/J
 Install the CLI globally OR  use npx:
 
 ```bash
-  npm install -g create-api
+  npm install -g create-myexpress-api
 ```
 
 Usage
 
 ```bash
   # with global install
-  create-api name-of-your-app
+  create-myexpress-api name-of-your-app
   # with npx
-  npx create-api name-of-your-app
+  npx create-myexpress-api name-of-your-app
 ```
 ***This will create a directory with the given name, clone the express API boilerplate repo into it, and install dependencies.***
 
